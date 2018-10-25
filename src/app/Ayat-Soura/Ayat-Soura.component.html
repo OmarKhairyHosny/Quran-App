@@ -1,0 +1,8 @@
+<div *ngFor="let a of aya">
+  <p>{{a.name}}</p>
+  <p>{{a.aya[0].bismillah}}</p>
+  <div *ngFor="let b of a.aya">
+    <p>{{b.text}} &&</p>
+
+  </div>
+</div>
