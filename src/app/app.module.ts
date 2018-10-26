@@ -11,6 +11,8 @@ const appRoutes: Routes = [
   { path: '', component: QuranListComponent },
 
   { path: 'ayat-soura/:index', component: AyatSouraComponent },
+  { path: 'quran-list', component: QuranListComponent },
+
   
 ];
 

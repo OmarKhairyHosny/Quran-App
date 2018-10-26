@@ -1,4 +1,4 @@
-export class Ayaaa {
+export class Ayat {
      index: string;
      text:string;
      bismillah?: string;

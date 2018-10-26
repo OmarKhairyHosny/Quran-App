@@ -1,15 +1,18 @@
-<div class="ayat">
-  <div *ngFor="let a of aya">
-    <p>{{a.name}}</p>
-    <p>{{a.aya[0].bismillah}}</p>
+<button id="fehres" routerLink="/quran-list">الفهرس</button>
 
+<div *ngFor="let ayaah of ayatext">
+  <p>{{ayaah.name}}</p>
+  <p>{{ayaah.aya[0].bismillah}}</p>
 
-    <ul class="allAyat">
-      <li *ngFor="let b of a.aya" class="LineAya">
-        <a> {{b.text}} </a>
+  <div>
+    <ul>
+      <li *ngFor="let text of ayaah.aya">
+        <a> {{text.text}} </a>
         <label><i class="fas fa-certificate"></i></label>
       </li>
     </ul>
 
   </div>
+  <p>صدق اللَّهِ العظيم</p>
+
 </div>

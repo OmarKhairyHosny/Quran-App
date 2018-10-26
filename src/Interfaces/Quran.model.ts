@@ -1,8 +1,8 @@
-import { Ayaaa } from "./ayaaa.model";
+import { Ayat } from "./ayat.model";
 
 export class Quran {
     index: string;
     name: string;
-    aya: Ayaaa[];
+    aya: Ayat[];
 
 }

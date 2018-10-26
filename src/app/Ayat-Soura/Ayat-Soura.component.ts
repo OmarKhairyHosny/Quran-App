@@ -9,16 +9,15 @@ import { ActivatedRoute } from '@angular/router'
   styleUrls: ['./Ayat-Soura.component.css']
 })
 export class AyatSouraComponent implements OnInit {
-  aya : Quran[];
-Quers : Quran[];
-Soura: Quran;
+  ayatext : Quran[];
+
 
   constructor(private QuranService : QuranAppServiceService, private activeLink:ActivatedRoute) { }
-index : string;
+  index : string;
   ngOnInit() {
      
     this.index=this.activeLink.snapshot.params["index"];
-    this. QuranService.getbyIndex(this.index).subscribe(aya => {this.aya = aya})
+    this. QuranService.getbyIndex(this.index).subscribe(ayatext => {this.ayatext = ayatext})
 
 }
 }
