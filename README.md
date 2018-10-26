@@ -1,31 +1,17 @@
 # QuranApp
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
+###brief about QuranApp
+I had made Quran Application which display list of Quran's sura and when click on each one display it's ayat,you can go back for "الفهرس"  by click on button or click on "التالي " and "السابق " to go to previous and next one.
+I had used angular 2+ and sass for design 
+you can run Quran-app by two option the first git clone this link or download project
+and write a command "ng serve -o"
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Running the application
 
-## Code scaffolding
+git clone app and Run the application as an Angular application:
+ 
+ command ng serve -o
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
-## Build
+The application is depending on backend API https://m7mdsami.com/Quran_json/read_json.php
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to GitHub Pages
-
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
