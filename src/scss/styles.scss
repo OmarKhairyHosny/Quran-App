@@ -19,6 +19,7 @@ button{
 .position {  
     margin:0 auto;
     width: 1000px;
+    
 }
 p{
     color: $letter-color;
@@ -29,12 +30,16 @@ p{
 
 div{
     text-align: justify;
+ 
     ul{
         margin: 0 auto;
         padding: 30px;
         width: 1000px;
         background-color: $ayat-contanier;
         color:$ayat-color;
+        border: 1px solid $ayat-contanier;
+        border-radius: 15px;
+        box-shadow: 5px 5px $ayat-color;  
         li{
             display: inline;
             a{
@@ -51,9 +56,30 @@ div{
         font-size: 50px;
         font-weight: bold;
     }
+    
 } 
 #fehres{
     float: left;
     background-color: white;
     color: $button-color;
+}
+
+@mixin lRDirection {
+    color: $letter-color;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.directions{
+    width: 1000px;
+    margin: 0px  auto;
+    padding-top: 30px;
+    a#right{
+        float: right;
+    @include lRDirection();
+    }
+    a#left{
+        float: left;
+     @include lRDirection();
+    }
 }

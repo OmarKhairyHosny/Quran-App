@@ -1,18 +1,30 @@
 <button id="fehres" routerLink="/quran-list">الفِهْرِس</button>
 
 <div *ngFor="let ayaah of ayatext">
-  <p>{{ayaah.name}}</p>
+  <p>سورة  {{ayaah.name}}</p>
   <p>{{ayaah.aya[0].bismillah}}</p>
 
-  <div>
+  <div class="shodow">
     <ul>
       <li *ngFor="let text of ayaah.aya">
         <a> {{text.text}} </a>
         <label><i class="fas fa-certificate"></i></label>
       </li>
+     
     </ul>
-
+    <div class="directions">
+        <a id="right" (click)="moveright()">التالي</a>
+        <a id="left"(click)="moveLeft()">السابق</a>
+    
+     </div>
   </div>
-  <p>صدق اللَّهِ العظيم</p>
 
+      <p>صدق اللَّهِ العظيم</p>
+  
+ 
+     
+  
+ 
 </div>
+  
+ 

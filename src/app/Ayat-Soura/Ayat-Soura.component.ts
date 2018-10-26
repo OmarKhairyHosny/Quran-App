@@ -1,7 +1,7 @@
 import { Component, OnInit, Input,Output } from '@angular/core';
 import { Quran } from 'Interfaces/Quran.model';
 import { QuranAppServiceService } from 'Services/QuranApp-Service.service';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute,Router} from '@angular/router'
 
 @Component({
   selector: 'app-Ayat-Soura',
@@ -10,14 +10,33 @@ import { ActivatedRoute } from '@angular/router'
 })
 export class AyatSouraComponent implements OnInit {
   ayatext : Quran[];
-
-
-  constructor(private QuranService : QuranAppServiceService, private activeLink:ActivatedRoute) { }
-  index : string;
+  index : number;
+  
+  constructor(private QuranService : QuranAppServiceService, private activeLink:ActivatedRoute,
+    public router: Router) { }
+  
   ngOnInit() {
      
     this.index=this.activeLink.snapshot.params["index"];
+    
     this. QuranService.getbyIndex(this.index).subscribe(ayatext => {this.ayatext = ayatext})
 
+}
+moveright(){
+  if(this.index<114){
+  ++this.index;
+  this.router.navigate(["/ayat-soura/"+this.index])
+  window.location.reload();
+  }
+  
+}
+moveLeft(){
+  if(this.index>1){
+  --this.index;
+    this.router.navigate(["/ayat-soura/"+this.index])
+    window.location.reload();
+
+  }
+  
 }
 }

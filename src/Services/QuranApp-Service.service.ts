@@ -13,7 +13,7 @@ constructor(private _http:Http) { }
   getAllsura():Observable<Quran[]>{
     return this._http.get('https://m7mdsami.com/Quran_json/read_json.php').map(this.extractData);
  }
- getbyIndex(index:string):Observable<Quran[]>{
+ getbyIndex(index:number):Observable<Quran[]>{
      
     return this._http.get('https://m7mdsami.com/Quran_json/read_json.php?index='+index).map(this.extractData);
  }

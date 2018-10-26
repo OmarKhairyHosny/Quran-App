@@ -1,5 +1,5 @@
 export class Ayat {
-     index: string;
+     index: number;
      text:string;
      bismillah?: string;
 }
