@@ -1,8 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
-
-
 @import './vars';
 
 body{
-    background-color: $color;
+    background-color: $body-color;
+    direction: rtl;
+}
+button{
+   font-size: 25px;
+    width: 250px;
+    background-color: $button-color;
+    color:$letter-color;
+    margin:0 auto 10px auto;
+    border: 1px solid $button-color;
+    border-radius: 10px;
+    box-shadow: 1px 5px black}
+.position {  
+    margin:0 auto;
+    width: 1000px;
+}
+p{
+    color: $letter-color;
+}
+.fa-certificate{
+    color: $button-color;
 }

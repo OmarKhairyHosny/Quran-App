@@ -1,8 +1,15 @@
-<div *ngFor="let a of aya">
-  <p>{{a.name}}</p>
-  <p>{{a.aya[0].bismillah}}</p>
-  <div *ngFor="let b of a.aya">
-    <p>{{b.text}} &&</p>
+<div class="ayat">
+  <div *ngFor="let a of aya">
+    <p>{{a.name}}</p>
+    <p>{{a.aya[0].bismillah}}</p>
+
+
+    <ul class="allAyat">
+      <li *ngFor="let b of a.aya" class="LineAya">
+        <a> {{b.text}} </a>
+        <label><i class="fas fa-certificate"></i></label>
+      </li>
+    </ul>
 
   </div>
 </div>

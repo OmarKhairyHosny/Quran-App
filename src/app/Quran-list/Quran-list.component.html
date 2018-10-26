@@ -1,3 +1,4 @@
-<div *ngFor="let quer of Quers">
-   <button (click)="GetSoura(quer.index)" routerLink="/ayat-soura/{{quer.index}}">{{quer.name}}</button>
+<div class="position" >
+   <button *ngFor="let quer of Quers"  (click)="GetSoura(quer.index)"   routerLink="/ayat-soura/{{quer.index}}">{{quer.name}}</button>
+   
 </div>
